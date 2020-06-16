@@ -196,6 +196,7 @@ namespace lab5OORPM {
 			this->radioButton2->TabStop = true;
 			this->radioButton2->Text = L"14";
 			this->radioButton2->UseVisualStyleBackColor = true;
+			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &Form1::radioButton2_CheckedChanged);
 			// 
 			// radioButton3
 			// 
@@ -207,6 +208,7 @@ namespace lab5OORPM {
 			this->radioButton3->TabStop = true;
 			this->radioButton3->Text = L"16";
 			this->radioButton3->UseVisualStyleBackColor = true;
+			this->radioButton3->CheckedChanged += gcnew System::EventHandler(this, &Form1::radioButton3_CheckedChanged);
 			// 
 			// groupBox1
 			// 
@@ -370,6 +372,16 @@ private: System::Void radioButton1_CheckedChanged(System::Object^  sender, Syste
 		 }
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 			 this->Close();
+		 }
+private: System::Void radioButton2_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+			 radioButton1->Enabled=0;
+			 radioButton2->Enabled=0;
+			 radioButton3->Enabled=0;
+		 }
+private: System::Void radioButton3_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+			 radioButton1->Enabled=0;
+			 radioButton2->Enabled=0;
+			 radioButton3->Enabled=0;
 		 }
 };
 }
